@@ -1,1 +1,36 @@
-spring.application.name=BoardProject
+debug: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+
+    org.springframework.web.server: debug
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/board
+    username: uno
+    password: 9840
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    defer-datasource-initialization: true # ???? ?????? ?? ??????
+    hibernate.ddl-auto: create #??? ??  DDL? ?? ? ??? ?? ??
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate.format_sql: true  # ?? ???? ???? ?? ??? ???,???? ??? ????
+      hibernate.default_batch_fetch_size: 100
+  h2.console.enabled: false
+  sql.init.mode : always
+
+
+
+
+
+
+
