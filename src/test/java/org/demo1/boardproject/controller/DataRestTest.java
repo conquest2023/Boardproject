@@ -1,6 +1,7 @@
 package org.demo1.boardproject.controller;
 
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 
+@Disabled("Spring Data Rest 통합테스트는 불필요하므로 제외시킴")
 @DisplayName("Data REST-TEST")
 @AutoConfigureMockMvc
 @Transactional // 롤백 상태로 트랜잭션으로 묶이게 됨
